@@ -1,8 +1,8 @@
-;;dna-debug.el -- functions to assist when debugging your DNA
+;;; dna-debug.el --- functions to assist when debugging your DNA
 
-;;commentary:
+;;; Commentary:
 
-;;DNA is a form of code delivered with your body. it is not Free
+;; DNA is a form of code delivered with your body. it is not Free
 ;; Software, because even if you get a working system(you) and many
 ;; copies of the code, present in all your cells, you dont get the
 ;; tools to actualy read and understand the code.
@@ -11,30 +11,31 @@
 ;; readable form of your DNA. You can do this from services such as
 ;; decodeme, or 23andme.
 
-;;The format used by decodeme looks like this:
+;; The format used by decodeme looks like this:
 
 ;; Name,Variation,Chromosome,Position,Strand,YourCode
 ;; rs1799971,A/G,6,154402490,+,AG
 ;; ...
 
-;;rs1799971 is an SNP identifier. Not all snp identifiers currently
-;;have any meaningful information associated, but this particular
-;;identifier you can examine by doing M-X dnabug-snpedia RET with
-;;point at the id. A browser window will open(use w3m to browse in Emacs)
-;;and you can then find this entry:
+;; rs1799971 is an SNP identifier. Not all snp identifiers currently
+;; have any meaningful information associated, but this particular
+;; identifier you can examine by doing M-X dnabug-snpedia RET with
+;; point at the id. A browser window will open(use w3m to browse in Emacs)
+;; and you can then find this entry:
 
 ;;  rs1799971(A;G) stronger cravings for alcohol; if alcoholic,
 ;;  naltrexone treatment 2x more successful
 
-;;This means that if you have this particular snp combination you
-;;might consider being careful with alcohol consumption.
+;; This means that if you have this particular snp combination you
+;; might consider being careful with alcohol consumption.
 
-;;This is currently the only method of DNA debugging, modifying
-;;behaviour such as not to trigger undesired parts of the DNA code, or
-;;trigger desired parts. Its not currently feasible to rewrite parts
-;;of your DNA (except through spawning, which is outside the scope of
-;;this Emacs mode) 
+;; This is currently the only method of DNA debugging, modifying
+;; behaviour such as not to trigger undesired parts of the DNA code, or
+;; trigger desired parts. Its not currently feasible to rewrite parts
+;; of your DNA (except through spawning, which is outside the scope of
+;; this Emacs mode)
 
+;;; Code:
 
 (require 'json)
 

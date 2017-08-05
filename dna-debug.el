@@ -1,5 +1,7 @@
 ;;; dna-debug.el --- functions to assist when debugging your DNA
 
+;; License: GPL-3+
+
 ;;; Commentary:
 
 ;; DNA is a form of code delivered with your body. it is not Free
